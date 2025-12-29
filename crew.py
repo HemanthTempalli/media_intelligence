@@ -1,5 +1,7 @@
 from crewai import Crew, Process
 
+import json
+
 # =========================
 # IMPORT TASKS
 # =========================
@@ -59,3 +61,8 @@ if __name__ == "__main__":
     print("FINAL NEWS INTELLIGENCE OUTPUT")
     print("==============================\n")
     print(result)
+
+
+# after print(result)
+with open("output.json", "w", encoding="utf-8") as f:
+    json.dump(result, f, indent=2)
